@@ -1,4 +1,4 @@
-<section id='oneDayForecast' ng-show='locationCtrl.oneDayForecast'>
+<section id='oneDayForecast' ng-show='locationCtrl.oneDayForecast' class="stretchRight">
   <h1>{{locationCtrl.location.name}}</h1><br>
   <h3>Forecast for {{locationCtrl.date(locationCtrl.marineWeather[0].date)}}</h3>
   <div ng-repeat='tide in locationCtrl.tideInfo[0].tide_data'>
@@ -14,7 +14,7 @@
   <br>
   <a href="#/location/{{locationCtrl.location.name}}/instagram" >Click to see Instagram feed</a>
 </section>
-<section ng-show='locationCtrl.sevenDayShow' id='fiveDay'>
+<section ng-show='locationCtrl.sevenDayShow' id='fiveDay' class="stretchLeft">
   <h1>{{locationCtrl.location.name}}</h1><br>
 <div ng-repeat='day in locationCtrl.marineWeather'>
    <h3>Forecast for {{locationCtrl.date(day.date)}}</h3>

@@ -12,7 +12,7 @@
     <ui-gmap-search-box id="search-box"
     template="mapCtrl.factory.searchbox.template"
     events="mapCtrl.factory.searchbox.events"
-    position="'TOP_RIGHT'">
+    position="'TOP_RIGHT'" class="stretchRight">
     </ui-gmap-search-box>
 
     <ui-gmap-marker id='markers' ng-repeat='marker in mapCtrl.ids' idKey='marker.id' coords='marker.coords' click='mapCtrl.getWeather(marker.id, marker.coords)'>
@@ -21,7 +21,7 @@
   </ui-gmap-google-map>
 </div>
 
-<div ng-show='mapCtrl.show' id='locationPopup'>
+<div ng-show='mapCtrl.show' id='locationPopup' class="slideExpandUp">
       {{mapCtrl.selected.name}}<br>
       Temperature: {{mapCtrl.selected.weather.main.temp}}<br>
       Windspeed: {{mapCtrl.selected.weather.wind.speed}}<br>
